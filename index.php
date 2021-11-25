@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta http-equiv="Content-Security-Policy" content="script-src 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' ;" >
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
+    
     <title>Secure Coding</title>
   </head>
   <body>
@@ -39,7 +39,6 @@
       $replacement = ' ';
       $uname = preg_replace($pattern, $replacement, $uname);
       $query=mysqli_query($connection,"SELECT * FROM users WHERE username ='$uname' AND password ='$password'") or die("Query Unsuccessfull:".mysqli_error($connection));
-
       if($query_run)
       {
         echo "Login Successfull";
@@ -58,6 +57,6 @@
       }
     }
   ?>
-<script>res.setHeader("Content-Security-Policy","Script-src https://code.jquery.com/jquery-3.2.1.slim.min.js https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js");</script>
-  </body>
+ 
+</body>
 </html>
